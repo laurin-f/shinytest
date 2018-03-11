@@ -1,6 +1,5 @@
-install.packages("shiny")
+#install.packages("shiny")
 library(shiny)
-runExample("01_hello")
 
 # Define UI for application that plots random distributions 
 ui<-shinyUI(pageWithSidebar(
@@ -54,15 +53,10 @@ server<-shinyServer(function(input, output) {
     
     # generate an rnorm distribution and plot it
     curve(input$x1*x+input$x2*x^2+input$x3*x^3+input$x4*x^4,from=-10,to=10)
-    curve(input$x1*x,add=T,col=grey(0.2))
+
 
     
   })
 })
 
 shinyApp(ui = ui, server = server)
-
-input<-data.frame(1)
-input$x1<-input$x2<-input$x3<-1
-formula <- input$x1*x+input$x2*x+input$x3*x
-curve(input$x1*x+input$x2*x+input$x3*x,from=-10,to=10)
