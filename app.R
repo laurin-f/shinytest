@@ -52,7 +52,7 @@ server<-shinyServer(function(input, output) {
   output$curve <- renderPlot({
     
     # generate an rnorm distribution and plot it
-    curve(input$x1*x+input$x2*x^2+input$x3*x^3+input$x4*x^4,from=-10,to=10)
+    curve(input$x1*x+input$x2*x^2+input$x3*x^3+input$x4*x^4,from=-2,to=2)
 
 
     
