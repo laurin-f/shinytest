@@ -59,4 +59,5 @@ server<-shinyServer(function(input, output) {
   })
 })
 
+#this changed
 shinyApp(ui = ui, server = server)
